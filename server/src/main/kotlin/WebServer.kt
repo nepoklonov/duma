@@ -1,5 +1,6 @@
 import io.ktor.application.*
 import io.ktor.html.*
+import io.ktor.response.*
 import io.ktor.routing.*
 import kotlinx.html.*
 
@@ -17,6 +18,10 @@ fun Application.module() {
                     script(src = "/client.js") { }
                 }
             }
+        }
+
+        get("/check") {
+            call.respondText("Hi")
         }
     }
 }
