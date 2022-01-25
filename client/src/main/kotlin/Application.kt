@@ -50,7 +50,7 @@ val requestButton = fc<Props> {
 //                }
 //            kotlinx.browser.window.alert(ans)
             GlobalScope.launch {
-                val response = window.fetch("http://localhost:8080/check")
+                val response = window.fetch("/check")
                 val text = response.await().text().await()
                 console.log(text)
             }
